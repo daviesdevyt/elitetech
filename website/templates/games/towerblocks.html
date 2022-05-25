@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Macro Token: Tower Blocks</title>
+  <link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='games/towerblocks/style.css') }}"/>
+  
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
+  integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
+  crossorigin="anonymous"
+></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<meta name="viewport" content="width=device-width,user-scalable=no">
+
+<div id="game" class="menu"><span id="connection_status" ></span> <span >Balance: <span id='balance'></span></span> <span><a href="{{url_for('views.games')}}" style="color: black;"><< Back to games</a></span></div>
+<div id="container">
+	<div id="score">0</div>
+	<div id="instructions">Click (or press the spacebar) to place the block</div>
+	<div class="game-over">
+		<h2>Game Over</h2>
+		<h4>Best: <span id="best"></span></h4>
+		<h4>Macro Earned: <span id="earned"></span></h4>
+		<p id="res"></p>
+		<p>Click or spacebar to start again</p>
+	</div>
+	<div class="game-ready">
+		<div id="start-button">Start</div>
+		<div></div>
+	</div>
+</div>
+<!-- partial -->
+<script src='https://codepen.io/ste-vg/pen/zBVaZw.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js'></script>
+<script src="{{ url_for('static', filename='games/index.js') }}"></script>
+<script src="{{ url_for('static', filename='games/towerblocks/script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}
+Macro Token: Games
+{% endblock %}
+{% block header %}
+<div
+	id="home"
+	class="header-hero bg_cover"
+	style="background-image: url({{ url_for('static', filename='images/banner-bg.svg') }})"
+>
+	<div class="container">
+		<div class="header-hero-content text-center">
+			<h2
+				class="header-title wow fadeInUp"
+				data-wow-duration="1.3s"
+				data-wow-delay="0.5s"
+			>
+				Game card NFTS
+			</h2>
+		</div>
+		<div id="particles-1" class="particles"></div>
+	</div>
+	<br />
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-4 col-md-7 col-sm-8">
+				<div
+					class="single-services text-center mt-30 wow fadeIn"
+					data-wow-duration="1s"
+					data-wow-delay="0.2s"
+				>
+					<img src="{{ url_for('static', filename='images/snake-nft.png') }}" alt="">
+					<div class="services-content mt-30">
+						<a class="btn btn-warning">Buy <i class="lni lni-shopping-basket"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-7 col-sm-8">
+				<div
+					class="single-services text-center mt-30 wow fadeIn"
+					data-wow-duration="1s"
+					data-wow-delay="0.2s"
+				>
+					<img src="{{ url_for('static', filename='images/tower-nft.png') }}" alt="">
+					<div class="services-content mt-30">
+						<a class="btn btn-warning">Buy <i class="lni lni-shopping-basket"></i></a>
+					</div>
+				</div>
+			</div>			
+			<div class="col-lg-4 col-md-7 col-sm-8">
+				<div
+					class="single-services text-center mt-30 wow fadeIn"
+					data-wow-duration="1s"
+					data-wow-delay="0.2s"
+				>
+					<img src="{{ url_for('static', filename='images/coloron-nft.png') }}" alt="">
+					<div class="services-content mt-30">
+						<a class="btn btn-warning">Buy <i class="lni lni-shopping-basket"></i></a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+{% endblock %}

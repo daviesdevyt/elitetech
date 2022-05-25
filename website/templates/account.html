@@ -1,0 +1,117 @@
+{% extends 'base.html' %} {% block title %} Macro Token: Account {% endblock %}
+
+
+{% block header %}
+<head>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
+	integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
+	crossorigin="anonymous"
+	></script>
+	<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/account.js') }}"></script>
+</head>
+<div
+	id="home"
+	class="header-hero bg_cover"
+	style="background-image: url({{ url_for('static', filename='images/banner-bg.svg') }})"
+>
+	<div class="container">
+		<div class="header-hero-content text-center">
+			<h2
+				class="header-title wow fadeInUp"
+				data-wow-duration="1.3s"
+				data-wow-delay="0.5s"
+			>
+				My Account
+			</h2>
+		</div>
+		<div id="particles-1" class="particles"></div>
+	</div>
+	<br />
+	<div class="container">
+		<div
+			class="single-services text-center mt-10 wow fadeIn"
+			data-wow-duration="1s"
+			data-wow-delay="0.2s"
+		>
+			<div
+				class="counter-wrapper mt-10 wow fadeIn"
+				data-wow-duration="1s"
+				data-wow-delay="0.8s"
+			>
+			<h2
+				class="header-title wow fadeInUp"
+				data-wow-duration="1.3s"
+				data-wow-delay="0.5s"
+				>
+					Wallet
+				</h2>
+				<div class="counter-content">
+					<p id="addr"><i class='fa fa-google-wallet'></i> {{ current_user.address }}</p>
+					<script>
+						var addr = '{{ current_user.address }}'
+						if ($(document).width() < 800){
+							$("#addr").html(`${addr.slice(0, 20)}.....${addr.slice(addr.length-7, addr.length)}`)
+						}
+					</script>
+				</div>
+				<br>
+				<div class="counter-content">
+					<button class="main-btn" id="mine">
+						<i class="fa fa-bolt"></i> Mine
+					</button>
+				</div>
+				<!-- counter content -->
+				<div class="row no-gutters">
+					<div class="col-4">
+						<div
+							class="single-counter counter-color-1 d-flex align-items-center justify-content-center"
+						>
+							<div class="counter-items text-center">
+								<span class="count"><span class="counter" id="mined">{{ "%.2f"|format(current_user.mined) }}</span></span>
+								<p class="text">Mined</p>
+							</div>
+						</div>
+						<!-- single counter -->
+					</div>
+					<div class="col-4">
+						<div
+							class="single-counter counter-color-2 d-flex align-items-center justify-content-center"
+						>
+							<div class="counter-items text-center">
+								<span class="count"><span class="counter">{{ "%.2f"|format(current_user.earned) }}</span></span>
+								<p class="text">Earned</p>
+							</div>
+						</div>
+						<!-- single counter -->
+					</div>
+					<div class="col-4">
+						<div
+							class="single-counter counter-color-3 d-flex align-items-center justify-content-center"
+						>
+							<div class="counter-items text-center">
+								<span class="count"><span class="bal"></span></span>
+								<p class="text">Other</p>
+							</div>
+						</div>
+						<!-- single counter -->
+					</div>
+				</div>
+				<br><br>
+				<div class="counter-content">
+					<h4>Not in wallet: <span id="balance">{{ "%.3f"|format(current_user.earned + current_user.mined) }} MCR</span></h4>
+					<h4>In wallet: <span class="bal"></span> MCR</h4>
+				</div>
+			</div>
+			<br>
+			<div class="counter-content">
+				<button class="btn btn-warning" id="transfer">
+					<i class="fa fa-send-o"></i> Transfer Macro to wallet
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

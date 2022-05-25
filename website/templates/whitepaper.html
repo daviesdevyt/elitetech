@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% block title %} Macro Token: Account {% endblock %}
+
+
+{% block header %}
+<head>
+	<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
+	integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
+	crossorigin="anonymous"
+	></script>
+	<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/account.js') }}"></script>
+</head>
+<div
+	id="home"
+	class="header-hero bg_cover"
+	style="background-image: url({{ url_for('static', filename='images/banner-bg.svg') }})"
+>
+	<div class="container">
+		<div class="header-hero-content text-center">
+			<h2
+				class="header-title wow fadeInUp"
+				data-wow-duration="1.3s"
+				data-wow-delay="0.5s"
+			>
+				White paper
+			</h2>
+		</div>
+		<div id="particles-1" class="particles"></div>
+	</div>
+	<br />
+	<div class="container">
+		<div
+			class="single-services text-center mt-10 wow fadeIn"
+			data-wow-duration="1s"
+			data-wow-delay="0.2s"
+		>
+		<h3>Introduction</h3>
+		<p>Lorem ipsum dolor sit amet. Ut quam tempore est quos mollitia et molestiae harum? Qui fugit illum eos inventore velit qui dolore voluptatem sit aspernatur autem ut aspernatur dolores est dignissimos officia qui officia molestiae. Omnis eligendi in tenetur molestiae qui adipisci odit ab dolores temporibus aut voluptatem dolores aut maiores dignissimos. Non deserunt veniam non pariatur dolores et adipisci praesentium et perferendis eaque 33 officia eius aut maxime quibusdam.
+
+			Eos consequatur modi est molestiae voluptatem id nisi commodi. 33 dolores soluta non saepe galisum est sint excepturi! Non quos quia ut consequatur veniam in eligendi mollitia eos neque ratione. Sit porro maiores est voluptatem deserunt est debitis deleniti sed sequi architecto sed officia labore.
+			
+			Qui galisum nisi sed quidem laudantium 33 blanditiis sapiente ut adipisci quos eos ipsa impedit. Ea maxime porro et repellat consectetur vel ratione nobis sed veniam eius et beatae quisquam qui omnis dignissimos ut nisi voluptas!</p>
+			<br>
+		
+		<h3>Tokenomics</h3>
+		<p>Lorem ipsum dolor sit amet. Ut quam tempore est quos mollitia et molestiae harum? Qui fugit illum eos inventore velit qui dolore voluptatem sit aspernatur autem ut aspernatur dolores est dignissimos officia qui officia molestiae. Omnis eligendi in tenetur molestiae qui adipisci odit ab dolores temporibus aut voluptatem dolores aut maiores dignissimos. Non deserunt veniam non pariatur dolores et adipisci praesentium et perferendis eaque 33 officia eius aut maxime quibusdam.
+
+			Eos consequatur modi est molestiae voluptatem id nisi commodi. 33 dolores soluta non saepe galisum est sint excepturi! Non quos quia ut consequatur veniam in eligendi mollitia eos neque ratione. Sit porro maiores est voluptatem deserunt est debitis deleniti sed sequi architecto sed officia labore.
+			
+			Qui galisum nisi sed quidem laudantium 33 blanditiis sapiente ut adipisci quos eos ipsa impedit. Ea maxime porro et repellat consectetur vel ratione nobis sed veniam eius et beatae quisquam qui omnis dignissimos ut nisi voluptas!</p>
+		<h3>Roadmap</h3>
+		<p>
+			Lorem ipsum dolor sit amet. Ut quam tempore est quos mollitia et molestiae harum? Qui fugit illum eos inventore velit qui dolore voluptatem sit aspernatur autem ut aspernatur dolores est dignissimos officia qui officia molestiae. Omnis eligendi in tenetur molestiae qui adipisci odit ab dolores temporibus aut voluptatem dolores aut maiores dignissimos. Non deserunt veniam non pariatur dolores et adipisci praesentium et perferendis eaque 33 officia eius aut maxime quibusdam.
+
+Eos consequatur modi est molestiae voluptatem id nisi commodi. 33 dolores soluta non saepe galisum est sint excepturi! Non quos quia ut consequatur veniam in eligendi mollitia eos neque ratione. Sit porro maiores est voluptatem deserunt est debitis deleniti sed sequi architecto sed officia labore.
+
+Qui galisum nisi sed quidem laudantium 33 blanditiis sapiente ut adipisci quos eos ipsa impedit. Ea maxime porro et repellat consectetur vel ratione nobis sed veniam eius et beatae quisquam qui omnis dignissimos ut nisi voluptas!
+		</p>
+		<br>
+		<h3>Vision</h3>
+		<p>
+			Lorem ipsum dolor sit amet. Ut quam tempore est quos mollitia et molestiae harum? Qui fugit illum eos inventore velit qui dolore voluptatem sit aspernatur autem ut aspernatur dolores est dignissimos officia qui officia molestiae. Omnis eligendi in tenetur molestiae qui adipisci odit ab dolores temporibus aut voluptatem dolores aut maiores dignissimos. Non deserunt veniam non pariatur dolores et adipisci praesentium et perferendis eaque 33 officia eius aut maxime quibusdam.
+
+Eos consequatur modi est molestiae voluptatem id nisi commodi. 33 dolores soluta non saepe galisum est sint excepturi! Non quos quia ut consequatur veniam in eligendi mollitia eos neque ratione. Sit porro maiores est voluptatem deserunt est debitis deleniti sed sequi architecto sed officia labore.
+
+Qui galisum nisi sed quidem laudantium 33 blanditiis sapiente ut adipisci quos eos ipsa impedit. Ea maxime porro et repellat consectetur vel ratione nobis sed veniam eius et beatae quisquam qui omnis dignissimos ut nisi voluptas!
+		</p>
+		<br>
+
+		<h3>Launch</h3>
+		<p>Lorem ipsum dolor sit amet. Ut quam tempore est quos mollitia et molestiae harum? Qui fugit illum eos inventore velit qui dolore voluptatem sit aspernatur autem ut aspernatur dolores est dignissimos officia qui officia molestiae. Omnis eligendi in tenetur molestiae qui adipisci odit ab dolores temporibus aut voluptatem dolores aut maiores dignissimos. Non deserunt veniam non pariatur dolores et adipisci praesentium et perferendis eaque 33 officia eius aut maxime quibusdam.
+
+			Eos consequatur modi est molestiae voluptatem id nisi commodi. 33 dolores soluta non saepe galisum est sint excepturi! Non quos quia ut consequatur veniam in eligendi mollitia eos neque ratione. Sit porro maiores est voluptatem deserunt est debitis deleniti sed sequi architecto sed officia labore.
+			
+			Qui galisum nisi sed quidem laudantium 33 blanditiis sapiente ut adipisci quos eos ipsa impedit. Ea maxime porro et repellat consectetur vel ratione nobis sed veniam eius et beatae quisquam qui omnis dignissimos ut nisi voluptas!</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title>Presale</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js" integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='presale/css/style.css') }}" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+  <script type="text/javascript" src="{{ url_for('static', filename='presale/js/jquery.particleground.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='presale/js/demo.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='presale/index.js') }}"></script>
+</head>
+
+<body>
+  <div id="particles">
+    <div id="intro">
+      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Presale</h2>
+      <div style="padding: 10px; position:50%">
+        <h4>1 Macro ≈ 0.0001 BNB</h4>
+        <div class="form-inline">
+          <input type="tel" id="amount" class="form-control" style="border-radius: 10px; border:2px solid grey; height:30px; width:50%; background-color:#336699; color:white;" placeholder="Amount of Macro">
+          <h4><i>BNB ≈ <text id="price">0</text></i></h4>
+          <button style="border-radius: 10px;" id="buy_btn" disabled>Loading ...</button>
+          <br><br>
+          <h4>MCR Balance: <text class="bal">0</text> MCR</h4>
+          <h4>BNB Balance: <text id="bnb_bal">0</text> BNB</h4>
+        </div>
+      </div>
+      <a href="{{ url_for('views.home') }}" style="color:white;"><i class="	fa fa-angle-double-left"></i>&nbsp; Back to home</a>
+    </div>
+  </div>
+</body>
+</html>

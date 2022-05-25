@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<!--====== Title ======-->
+		<title>{% block title %}{% endblock %}</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"
+			integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!--====== Favicon Icon ======-->
+		<link
+			rel="shortcut icon"
+			href="{{ url_for('static', filename='images/favicon.png') }}"
+			type="image/png"
+		/>
+		<!--====== Animate CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/animate.css') }}"
+		/>
+
+		<!--====== Magnific Popup CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/magnific-popup.css') }}"
+		/>
+
+		<!--====== Slick CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/slick.css') }}"
+		/>
+
+		<!--====== Line Icons CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/LineIcons.css') }}"
+		/>
+
+		<!--====== Font Awesome CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/font-awesome.min.css') }}"
+		/>
+
+		<!--====== Bootstrap CSS ======-->
+
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+		/>
+
+		<!--====== Default CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/default.css') }}"
+		/>
+		<!--====== Style CSS ======-->
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/style.css') }}"
+
+		/>
+	</head>
+
+	<body>
+		<!--====== PRELOADER PART START ======-->
+		<div class="preloader">
+			<div class="loader">
+				<div class="ytp-spinner">
+					<div class="ytp-spinner-container">
+						<div class="ytp-spinner-rotator">
+							<div class="ytp-spinner-left">
+								<div class="ytp-spinner-circle"></div>
+							</div>
+							<div class="ytp-spinner-right">
+								<div class="ytp-spinner-circle"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--====== PRELOADER PART ENDS ======-->
+
+		<!--====== HEADER PART START ======-->
+
+		<header class="header-area">
+			<div class="navbar-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<nav class="navbar navbar-expand-lg">
+								<a class="navbar-brand" href="">
+									<img
+										src="{{ url_for('static', filename='images/logo.svg') }}"
+										alt="Logo"
+									/>
+								</a>
+								<button
+									class="navbar-toggler"
+									type="button"
+									data-toggle="collapse"
+									data-target="#navbarSupportedContent"
+									aria-controls="navbarSupportedContent"
+									aria-expanded="false"
+									aria-label="Toggle navigation"
+								>
+									<span class="toggler-icon"></span>
+									<span class="toggler-icon"></span>
+									<span class="toggler-icon"></span>
+								</button>
+
+								<div
+									class="collapse navbar-collapse sub-menu-bar"
+									id="navbarSupportedContent"
+								>
+									<ul id="nav" class="navbar-nav ml-auto">
+										<li class="nav-item active">
+											<a class="page-scroll" href="/">Home</a>
+										</li>
+										<li class="nav-item">
+											<a class="page-scroll" href="/games">Games</a>
+										</li>
+										<li class="nav-item">
+											<a class="page-scroll" href="/presale">Presale</a>
+										</li>
+										<li class="nav-item">
+											<a class="page-scroll" href="/nfts">Nfts</a>
+										</li>
+										<li class="nav-item">
+											<a class="page-scroll" href="/whitepaper">White paper</a>
+										</li>
+										{% if current_user.is_authenticated %}
+										<hr>
+										<li class="nav-item">
+											<a class="page-scroll" href="/account">Account</a>
+										</li>
+										<li class="nav-item">
+											<a class="page-scroll" href="/logout">Logout</a>
+										</li>
+										{% endif %}
+									</ul>
+								</div>
+								<!-- navbar collapse -->
+							</nav>
+							<!-- navbar -->
+						</div>
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- navbar area -->
+{% block header %}{% endblock %}
+</header>
+{% block content %}{% endblock %}
+
+    <!--====== FOOTER PART START ======-->
+    
+    <footer id="footer" class="footer-area pt-120">
+        <div class="container">
+			{% if not current_user.subscribed %}
+            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="subscribe-content mt-45">
+                            <h2 class="subscribe-title">Subscribe Our Newsletter <span>get reguler updates</span></h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="subscribe-form mt-50">
+                            <form action="/newsletter" method="post">
+                                <input type="email" placeholder="Enter email" name="email">
+                                <button class="main-btn" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- subscribe area -->
+			{% endif %}
+            <div class="footer-widget pb-100">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <a class="logo" href="#">
+                                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="logo">
+                            </a>
+                            <p class="text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                            <ul class="social">
+                                <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
+                                <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
+                                <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
+                                <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-5 col-md-7 col-sm-7">
+                        <div class="footer-link d-flex mt-50 justify-content-md-between">
+                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <div class="footer-title">
+                                    <h4 class="title">Quick Link</h4>
+                                </div>
+                                <ul class="link">
+                                    <li><a href="#">Road Map</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Pricing</a></li>
+                                </ul>
+                            </div> <!-- footer wrapper -->
+                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                                <div class="footer-title">
+                                    <h4 class="title">Resources</h4>
+                                </div>
+                                <ul class="link">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Page</a></li>
+                                    <li><a href="#">Portfolio</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div> <!-- footer wrapper -->
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-3 col-md-5 col-sm-5">
+                        <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                            <div class="footer-title">
+                                <h4 class="title">Contact Us</h4>
+                            </div>
+                            <ul class="contact">
+                                <li>+809272561823</li>
+                                <li>info@gmail.com</li>
+                                <li>www.yourweb.com</li>
+                                <li>123 Stree New York City , United <br> States Of America 750.</li>
+                            </ul>
+                        </div> <!-- footer contact -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer widget -->
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-content">
+                                <p class="text">Designed and Developed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                            </div> <!-- copyright content -->
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer copyright -->
+        </div> <!-- container -->
+        <div id="particles-2"></div>
+    </footer>
+    
+
+
+    <!--====== Jquery js ======-->
+    <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/modernizr-3.7.1.min.js') }}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    
+    <!--====== Plugins js ======-->
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="{{ url_for('static', filename='js/ajax-contact.js') }}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+    
+    <!--====== wow js ======-->
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    
+    <!--====== Particles js ======-->
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+</body>
+
+</html>

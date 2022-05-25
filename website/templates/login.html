@@ -1,0 +1,177 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Macro: Login</title>
+    
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js" integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+        
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/LineIcons.css') }}">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->    
+   
+   
+    <!--====== PRELOADER PART START ======-->
+<!-- 
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== FOOTER PART START ======-->
+    <footer id="footer" class="footer-area pt-120">
+        <div class="container">
+            <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="col-lg-6">
+                    <div class="subscribe-content mt-45">
+                        <h2 class="subscribe-title">Login <span> with wallet</span></h2>
+                    </div>
+                </div>
+                <div class="input-group mt-20">
+                    <button class="btn btn-primary form-control" id="connect_btn">Connect wallet</button>
+                </div>
+                <form method="post">
+                    <input type="hidden" name="addr" id="wallet">
+                    <div class="input-group mt-20">
+                        <input type="password" name="pwd" placeholder="Enter password" class="form-control">
+                    </div>
+                    <div class="input-group mt-20">
+                        <button type='submit' class="main-btn" id="submit">Submit</button>
+                    </div>
+                </form>
+                <div class="input-group mt-20">
+                    <a href="{{ url_for('views.home') }}" style="color:black;"><i class="	fa fa-angle-double-left"></i>&nbsp; Back to home</a>
+                </div>
+            </div> <!-- subscribe area -->
+            <div class="footer-copyright">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright d-sm-flex justify-content-between">
+                            <div class="copyright-content">
+                                <p class="text">Designed by <a href="https://uideck.com" rel="nofollow">UIdeck</a></p>
+                            </div> <!-- copyright content -->
+                        </div> <!-- copyright -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- footer copyright -->
+        </div> <!-- container -->
+        <div id="particles-2"></div>
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->   
+    
+    <!--====== PART START ======-->
+    
+<!--
+    <section class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-"></div>
+            </div>
+        </div>
+    </section>
+-->
+    
+    <!--====== PART ENDS ======-->
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="{{ url_for('static', filename='js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/modernizr-3.7.1.min.js') }}"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    
+    <!--====== Plugins js ======-->
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="{{ url_for('static', filename='js/slick.min.js') }}"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="{{ url_for('static', filename='js/ajax-contact.js') }}"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="{{ url_for('static', filename='js/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.counterup.min.js') }}"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+    
+    <!--====== wow js ======-->
+    <script src="{{ url_for('static', filename='js/wow.min.js') }}"></script>
+    
+    <!--====== Particles js ======-->
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    
+    <!--====== Main js ======-->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="logo-2.svg"
+   id="svg15"
+   version="1.1"
+   viewBox="0 0 111.196 30.566"
+   height="30.566"
+   width="111.196">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="Group_2"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:cy="15.283"
+     inkscape:cx="55.828124"
+     inkscape:zoom="10.8637"
+     showgrid="false"
+     id="namedview17"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs7">
+    <linearGradient
+       y1="0"
+       gradientTransform="matrix(0.59624807,0.34424398,-0.7262291,1.2578657,382.43,45.489)"
+       gradientUnits="userSpaceOnUse"
+       y2="9.610208"
+       x2="16.900384"
+       x1="6.6274042"
+       id="linear-gradient">
+      <stop
+         id="stop2"
+         stop-color="#fe8464"
+         offset="0" />
+      <stop
+         id="stop4"
+         stop-color="#fe6e9a"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <g
+     transform="translate(-372.804 -44.291)"
+     data-name="Group 2"
+     id="Group_2">
+    <text
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#2e2e2e;stroke-width:0.898815"
+       y="68.711311"
+       x="408.93854"
+       font-weight="700"
+       font-family="Helvetica-Bold, Helvetica"
+       font-size="24px"
+       fill="#2e2e2e"
+       id="BASIC"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.898815"
+         id="tspan9"
+         y="68.711311"
+         x="408.93854">ElitecH</tspan></text>
+    <path
+       style="fill:url(#linear-gradient)"
+       fill="url(#linear-gradient)"
+       d="m 380.70685,66.725587 v 0 a 8.835,8.835 0 0 1 -4.17846,-5.668692 9.835,9.835 0 0 1 1.08861,-7.231534 9.835,9.835 0 0 1 5.71789,-4.557669 8.835,8.835 0 0 1 6.99846,0.784308 l -9.626,16.672721 z"
+       data-name="Subtraction 1"
+       id="Subtraction_1" />
+    <path
+       fill="#2e2e2e"
+       d="m 383.90965,68.01 v 0 a 13.694,13.694 0 0 0 20.07422,-15.403576 13.6,13.6 0 0 0 -6.38022,-8.315128 z"
+       data-name="Subtraction 2"
+       id="Subtraction_2" />
+  </g>
+</svg>
