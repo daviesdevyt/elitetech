@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="111.196"
-   height="30.566"
-   viewBox="0 0 111.196 30.566"
-   version="1.1"
-   id="svg15"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="logo.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+   id="svg15"
+   version="1.1"
+   viewBox="0 0 111.196 30.566"
+   height="30.566"
+   width="111.196">
   <metadata
      id="metadata19">
     <rdf:RDF>
@@ -26,69 +26,69 @@
     </rdf:RDF>
   </metadata>
   <sodipodi:namedview
-     inkscape:document-rotation="0"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     id="namedview17"
-     showgrid="false"
-     inkscape:zoom="10.8637"
-     inkscape:cx="54.140546"
-     inkscape:cy="15.283"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:current-layer="svg15"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg15" />
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:cy="-2.7401682"
+     inkscape:cx="-23.162658"
+     inkscape:zoom="1.920449"
+     showgrid="false"
+     id="namedview17"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
   <defs
      id="defs7">
     <linearGradient
-       id="linear-gradient"
-       x1="0.5"
-       x2="1.275"
+       gradientUnits="objectBoundingBox"
        y2="0.725"
-       gradientUnits="objectBoundingBox">
+       x2="1.275"
+       x1="0.5"
+       id="linear-gradient">
       <stop
-         offset="0"
+         id="stop2"
          stop-color="#fe8464"
-         id="stop2" />
+         offset="0" />
       <stop
-         offset="1"
+         id="stop4"
          stop-color="#fe6e9a"
-         id="stop4" />
+         offset="1" />
     </linearGradient>
   </defs>
   <g
-     style="opacity:1"
+     id="g5576-9-4"
      transform="matrix(2.0019503,0,0,2.0019503,118.02111,-378.80623)"
-     id="g5576-9-4">
+     style="opacity:1">
     <path
-       id="path4729-9-4"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.04978"
+       transform="scale(0.26458333)"
        d="m -176.14648,714.68359 -27.04102,46.20703 a 25.714285,26.785713 32.73695 0 0 35.88867,-8.76953 25.714285,26.785713 32.73695 0 0 -7.14453,-36.4375 25.714285,26.785713 32.73695 0 0 -1.70312,-1 z"
-       transform="scale(0.26458333)" />
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1.04978"
+       id="path4729-9-4" />
     <path
-       d="m -54.829683,200.25775 4.63275,-8.16146 a 4.507454,4.6952645 31.98106 0 0 -6.270092,1.62007 4.507454,4.6952645 31.98106 0 0 1.336516,6.37005 4.507454,4.6952645 31.98106 0 0 0.300826,0.17134 z"
+       id="path4729-3-8-9"
        style="opacity:1;fill:#fe7d74;fill-opacity:1;fill-rule:evenodd;stroke-width:0.184016"
-       id="path4729-3-8-9" />
+       d="m -54.829683,200.25775 4.63275,-8.16146 a 4.507454,4.6952645 31.98106 0 0 -6.270092,1.62007 4.507454,4.6952645 31.98106 0 0 1.336516,6.37005 4.507454,4.6952645 31.98106 0 0 0.300826,0.17134 z" />
   </g>
   <text
-     id="BASIC"
-     fill="#2e2e2e"
-     font-size="24px"
-     font-family="Helvetica-Bold, Helvetica"
-     font-weight="700"
-     x="36.444927"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.898815"
      y="24.426315"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;stroke-width:0.898815;fill-opacity:1;"><tspan
-       x="36.444927"
-       y="24.426315"
+     x="36.444927"
+     font-weight="700"
+     font-family="Helvetica-Bold, Helvetica"
+     font-size="24px"
+     fill="#2e2e2e"
+     id="BASIC"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.898815"
        id="tspan9"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:29.9605px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.898815;fill:#ffffff;fill-opacity:1;">ElitecH</tspan></text>
+       y="24.426315"
+       x="36.444927">Macro</tspan></text>
 </svg>

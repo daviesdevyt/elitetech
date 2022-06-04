@@ -12,8 +12,11 @@ class User(db.Model, UserMixin):
     mining = db.Column(db.Boolean, default=False)
     sid = db.Column(db.Text)
     subscribed = db.Column(db.Boolean, default=False)
+    earned_today = db.Column(db.Float, default=0)
+
     def get_balance(self):
         return self.mined+self.earned
+
 
 class Subscription(db.Model):
     email = db.Column(db.Text, primary_key=True)

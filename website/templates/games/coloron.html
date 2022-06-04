@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>Macro Token: Coloron</title>
-  <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
-<meta name="apple-mobile-web-app-capable" content="yes"> 
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="{{ url_for('static', filename='games/coloron/style.css') }}">
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
-integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
-crossorigin="anonymous"
-></script>
+    <meta charset="UTF-8">
+    <title>Macro Token: Coloron</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="{{ url_for('static', filename='images/color-wheel.png') }}">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700,900'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'><link rel="stylesheet" href="{{ url_for('static', filename='games/coloron/style.css') }}">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
+    integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -41,7 +41,7 @@ design by https://www.behance.net/vahanhovh
                     <h4 class="hint">hint: <span>red</span> color always comes first</h4>
                     <span class="hint">Macro Balance: <span id="balance">{{ "%.5f"|format(current_user.get_balance()) }}</span></span>
                     <div>
-                        <a href="{{url_for('views.games')}}" style="color: white;"><span><< Back to games</span></a>
+                        <a href="{{url_for('views.home')}}#games" style="color: white;"><span><< Back to games</span></a>
                     </div>
                     
                 </div>

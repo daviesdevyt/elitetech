@@ -6,7 +6,7 @@
   <link
   rel="stylesheet"
   href="{{ url_for('static', filename='games/towerblocks/style.css') }}"/>
-  
+  <link rel="icon" href="{{ url_for('static', filename='images/fort.png') }}">
   <script
   src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
   integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
@@ -17,7 +17,7 @@
 <!-- partial:index.partial.html -->
 <meta name="viewport" content="width=device-width,user-scalable=no">
 
-<div id="game" class="menu"><span id="connection_status" ></span> <span >Balance: <span id='balance'></span></span> <span><a href="{{url_for('views.games')}}" style="color: black;"><< Back to games</a></span></div>
+<div id="game" class="menu"><span id="connection_status" ></span> <span >Balance: <span id='balance'></span></span> <span><a href="{{url_for('views.home')}}#games" style="color: black;"><< Back to games</a></span></div>
 <div id="container">
 	<div id="score">0</div>
 	<div id="instructions">Click (or press the spacebar) to place the block</div>

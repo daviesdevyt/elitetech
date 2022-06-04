@@ -7,6 +7,8 @@ from datetime import timedelta, datetime
 @socketio.on('connect', namespace='/game')
 @login_required
 def connected():
+    if not current_user.mining:
+        start_mine()
     current_user.sid = request.sid
     db.session.commit()
     session[request.sid] = 0
@@ -20,7 +22,10 @@ def disconnected():
 @socketio.on('gameOver', namespace='/game')
 @login_required
 def game_over():
-    
+    if current_user.earned_today > 3:
+        emit('earningLimit')
+        return
+    current_user.earned_today += session[current_user.sid]
     current_user.earned += session[current_user.sid]
     session[current_user.sid] = 0
     db.session.commit()
@@ -47,6 +52,7 @@ def connect():
 def start_mine():
     if current_user.mining == True:
         return
+    current_user.earned_today = 0
     current_user.mining = True
     current_user.mined += 10
     current_user.started_mining = datetime.now()

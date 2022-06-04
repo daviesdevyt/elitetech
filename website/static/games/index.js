@@ -9,3 +9,5 @@ socket.on("disconnect", function () {
 })
 socket.on("getBalance", function (balance) {
 	document.getElementById('balance').innerHTML = (balance).toFixed(5);})
+socket.on("earningLimit", function () {
+	alert("You have rached your earning limit for today. You no longer be earning tokens from your points until your next mining cycle")})

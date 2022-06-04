@@ -28,10 +28,6 @@ def presale():
 def account():
     return render_template("account.html")
 
-@views.route('/games', methods=['GET', 'POST'])
-def games():
-    return render_template("games.html")
-
 @views.route('/token-abi')
 def token_abi():
     with open('website/static/tokenABI.json') as file:
@@ -57,6 +53,6 @@ def newsletter():
 def whitepaper():
     return render_template("whitepaper.html")
 
-@views.route('/nfts')
-def nfts():
-    return render_template("nfts.html")
+# @views.route('/nfts')
+# def nfts():
+#     return render_template("nfts.html")

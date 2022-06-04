@@ -3,7 +3,7 @@ function calc(){
     amt_in_bnb = amt*0.0001;
     let dec = Math.pow(10, 18)
     amt_in_bnb = Math.round(amt_in_bnb*dec)/dec
-    amt_in_bnb = Math.min(amt_in_bnb, 999999999999999999)
+    amt_in_bnb = Math.min(amt_in_bnb, 10000000)
     return amt_in_bnb
 }
 async function getTransactionReceipt(hash) {

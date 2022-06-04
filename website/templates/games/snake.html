@@ -18,6 +18,7 @@
 			rel="stylesheet"
 			href="{{ url_for('static', filename='games/snake/style.css') }}"
 		/>
+		<link rel="icon" href="{{ url_for('static', filename='images/snake.png') }}">
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"
 			integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ=="
@@ -44,7 +45,7 @@
 				<h1>SNAKE</h1>
 				<span>by Fariat</span>
 			</div>
-			<a href="{{url_for('views.games')}}" style="color: white;"><span><< Back to games</span></a>
+			<a href="{{url_for('views.home')}}#games" style="color: white;"><span><< Back to games</span></a>
 		</div>
 
 		<!-- partial -->
