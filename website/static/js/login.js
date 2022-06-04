@@ -11,7 +11,7 @@ async function loadToken() {
 	let eth_bal = await web3.eth.getBalance(account)
     $("#bnb_bal").html(web3.utils.fromWei(eth_bal.toString(), 'ether'))
 	$("#buy_btn").prop("disabled", false)
-	$("#buy_btn").html("Buy")
+	$("#buy_btn").html("Purchase MCR")
 }
 async function check_right_network() {
 	const yourNetworkId = 97;

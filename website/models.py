@@ -17,11 +17,3 @@ class User(db.Model, UserMixin):
 
 class Subscription(db.Model):
     email = db.Column(db.Text, primary_key=True)
-
-
-def circulating_supply():
-    t = 0
-    for i in User.query.all():
-        t += i.mined+i.earned
-    t = round(t, 5)
-    return t

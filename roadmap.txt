@@ -1,7 +1,1 @@
-0.000008bnb per BST for 2 billion
-0.000016bnb per BST for 1 billion
-0.000032bnb per BST for 0.5 billion
-use concept of amm for phase 4
-
-Ad revenue will be invested in the coin
-
+Add social media to bottom of page

@@ -4,14 +4,14 @@ from flask import Blueprint, render_template, request, flash, jsonify, json, ses
 from flask_login import current_user, login_required
 from flask_socketio import emit
 from . import db, socketio
-from .models import Subscription, User, circulating_supply
+from .models import Subscription
 
 views = Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 @views.route('/home', methods=['GET', 'POST'])
 def home():
-    return render_template("index.html", circulating_supply=circulating_supply())
+    return render_template("index.html")
 
 @views.route('/game', methods=['GET', 'POST'])
 @login_required
@@ -60,13 +60,3 @@ def whitepaper():
 @views.route('/nfts')
 def nfts():
     return render_template("nfts.html")
-
-@views.route('/withdraw', methods=['GET', "POST"])
-def withdraw():
-    # Send tokens to the  owner
-    return redirect(request.referrer)
-
-
-
-
-

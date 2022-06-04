@@ -13,7 +13,7 @@ async function getTransactionReceipt(hash) {
         web3.eth.getTransactionReceipt(hash, function(err, rec) {
             if (rec) {
                 console.log(rec);
-                $("#buy_btn").html("Buy")
+                $("#buy_btn").html("Purchase MCR")
                 $("#buy_btn").prop("disabled", false)
                 loadToken()
                 clearInterval(interval);

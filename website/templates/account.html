@@ -91,7 +91,7 @@
 							class="single-counter counter-color-3 d-flex align-items-center justify-content-center"
 						>
 							<div class="counter-items text-center">
-								<span class="count"><span class="bal"></span></span>
+								<span class="count"><span class="bal">Loading ..</span></span>
 								<p class="text">Other</p>
 							</div>
 						</div>
@@ -101,12 +101,12 @@
 				<br><br>
 				<div class="counter-content">
 					<h4>Not in wallet: <span id="balance">{{ "%.3f"|format(current_user.earned + current_user.mined) }} MCR</span></h4>
-					<h4>In wallet: <span class="bal"></span> MCR</h4>
+					<h4>In wallet: <span class="bal">??</span> MCR</h4>
 				</div>
 			</div>
 			<br>
 			<div class="counter-content">
-				<button class="btn btn-warning" id="transfer">
+				<button class="btn btn-secondary" disabled>
 					<i class="fa fa-send-o"></i> Transfer Macro to wallet
 				</button>
 			</div>

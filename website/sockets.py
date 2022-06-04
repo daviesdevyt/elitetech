@@ -20,6 +20,7 @@ def disconnected():
 @socketio.on('gameOver', namespace='/game')
 @login_required
 def game_over():
+    
     current_user.earned += session[current_user.sid]
     session[current_user.sid] = 0
     db.session.commit()
