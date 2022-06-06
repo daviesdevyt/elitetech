@@ -59,3 +59,4 @@ def start_mine():
     db.session.commit()
     print(current_user.mining, current_user.started_mining)
     connect()
+    emit('getBalance', current_user.get_balance())

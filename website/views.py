@@ -33,11 +33,6 @@ def token_abi():
     with open('website/static/tokenABI.json') as file:
         return jsonify(json.load(file))
 
-@views.route('/swap-abi')
-def swap_abi():
-    with open('website/static/swapABI.json') as file:
-        return jsonify(json.load(file))
-
 @views.route('/newsletter', methods=['GET', "POST"])
 def newsletter():
     if request.method=="POST":

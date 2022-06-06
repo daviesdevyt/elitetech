@@ -3,10 +3,8 @@ var web3;
 
 async function loadToken() {
    await $.getJSON("http://" + document.domain + ":" + location.port + "/token-abi", (data) => tokenabi = data);
-   await $.getJSON("http://" + document.domain + ":" + location.port + "/swap-abi", (data) => swapabi = data);
-   token = new web3.eth.Contract(tokenabi, "0x5843903E30812581BF99448d5D9C4ADB14EE2EBe");
-   swap = new web3.eth.Contract(swapabi, "0x3CA472Be694df26d3c3e29a00d3afFc9B2B89D6F");
-	let bal = await token.methods.balance(account).call();
+   token = new web3.eth.Contract(tokenabi, "0x059B7f3af931B18Cc1c5cc29AEcdEbc77E11960b");
+	let bal = await token.methods.getBalance(account).call();
     $(".bal").html(web3.utils.fromWei(bal.toString(), 'ether'))
 	let eth_bal = await web3.eth.getBalance(account)
     $("#bnb_bal").html(web3.utils.fromWei(eth_bal.toString(), 'ether'))

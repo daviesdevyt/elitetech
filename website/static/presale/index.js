@@ -21,11 +21,11 @@ async function getTransactionReceipt(hash) {
     });
 }, 1000)}
 
-    
+
 function buy(amt){
 	etherAmount = amt.toString();
     etherAmount = web3.utils.toWei(etherAmount, 'Ether');
-	swap.methods.buyTokens().send({ value: etherAmount, from: account }).on('transactionHash', (transactionHash) => {
+	token.methods.buyTokens().send({ value: etherAmount, from: account }).on('transactionHash', (transactionHash) => {
     $("#buy_btn").prop("disabled", true)
     $("#buy_btn").html("Processing...")
     getTransactionReceipt(transactionHash)

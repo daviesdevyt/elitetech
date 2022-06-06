@@ -34,3 +34,6 @@ $(document).ready(function () {
       $("#mine").prop('disabled', true);
     }
   )})
+
+socket.on("getBalance", function (balance) {
+  document.getElementById('mined').innerHTML = (balance).toFixed(5);})
