@@ -38,8 +38,6 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js"></script>
 </head>
 
 <body>
@@ -64,6 +62,15 @@
     <!--====== FOOTER PART START ======-->
     <div class="pt-120">
         <div class="container">
+            {% with messages = get_flashed_messages(with_categories = true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                <div class = "alert alert-{{ category }}">
+                {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
             <div class="subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="col-lg-6">
                     <div class="subscribe-content mt-45">
@@ -78,6 +85,11 @@
                     <div class="input-group mt-20">
                         <input type="password" name="pwd" placeholder="Enter password" class="form-control">
                     </div>
+                    <div class="mt-10">
+                        <label for="cheeckbox">Referral code?</label>
+                        <input type="checkbox" id="checkbox">
+                    </div>
+                        <input type="text" name="ref" id="ref" placeholder="Referral code" class="form-control" hidden>
                     <div class="input-group mt-20">
                         <button type='submit' class="main-btn" id="submit">Submit</button>
                     </div>
@@ -94,6 +106,7 @@
 
 
     <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login-form.js') }}"></script>
     
     <!--====== Main js ======-->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -37,8 +37,8 @@ def token_abi():
 def newsletter():
     if request.method=="POST":
         email = request.form['email']
+        if current_user: current_user.subscribed = True
         if not Subscription.query.get(email):
-            if current_user: current_user.subscribed = True
             new = Subscription(email=email)
             db.session.add(new)
             db.session.commit()

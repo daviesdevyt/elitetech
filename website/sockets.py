@@ -22,7 +22,7 @@ def disconnected():
 @socketio.on('gameOver', namespace='/game')
 @login_required
 def game_over():
-    if current_user.earned_today > 3:
+    if current_user.earned_today > 20:
         emit('earningLimit')
         return
     current_user.earned_today += session[current_user.sid]

@@ -3,7 +3,7 @@ pragma solidity ^0.6.0;
 contract MacroToken {
     string  public name = "Macro Token";
     string  public symbol = "MCR";
-    uint256 public totalSupply = 100000000000000000000000000; // 1 million tokens
+    uint256 public totalSupply = 100000000 * 10 ** 18;
     uint8   public decimals = 18;
     uint public rate = 10000;
     uint public amount_sold = 0;
@@ -75,12 +75,17 @@ contract MacroToken {
     function getCurrentPresaleLimit() public view returns(uint) {
         return amount_sold_limit;
     }
+    function burn() public {
+        require(msg.sender == owner, "Only the owner can burn the tokens");
+        balanceOf[address(this)] -= 10000 *10** 18;
+        balanceOf[address(0x000000000000000000000000000000000000dEaD)] += 10000*10** 18;
+    }
 
     function changeRate(uint _rate, uint _limit) public {
         require(msg.sender == owner, "Only the owner can change the rates");
         amount_sold = 0;
         rate = _rate;
-        amount_sold_limit = _limit;
+        amount_sold_limit = _limit * 10 ** 18;
     }
  
     function buyTokens() public payable {

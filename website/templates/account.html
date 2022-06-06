@@ -49,7 +49,11 @@
 				</h2>
 				<div class="counter-content">
 					<p id="addr"><i class='fa fa-google-wallet'></i> {{ current_user.address }}</p>
+					<p><i class='fa fa-user-plus'></i> Referral code: <cde id="cde">{{ current_user.referral_code }}</cde> <button style="border: none; background: transparent;" onclick="copy_text()"><i class="fa fa-copy"></i></button></p>
 					<script>
+						function copy_text() {
+							var copyText = document.getElementById("cde");
+							navigator.clipboard.writeText(copyText.innerText);}
 						var addr = '{{ current_user.address }}'
 						if ($(document).width() < 800){
 							$("#addr").html(`${addr.slice(0, 20)}.....${addr.slice(addr.length-7, addr.length)}`)

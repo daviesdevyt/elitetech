@@ -13,6 +13,7 @@ class User(db.Model, UserMixin):
     sid = db.Column(db.Text)
     subscribed = db.Column(db.Boolean, default=False)
     earned_today = db.Column(db.Float, default=0)
+    referral_code = db.Column(db.String(5))
 
     def get_balance(self):
         return self.mined+self.earned

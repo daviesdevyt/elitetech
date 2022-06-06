@@ -3,7 +3,7 @@ var web3;
 
 async function loadToken() {
    await $.getJSON("http://" + document.domain + ":" + location.port + "/token-abi", (data) => tokenabi = data);
-   token = new web3.eth.Contract(tokenabi, "0x059B7f3af931B18Cc1c5cc29AEcdEbc77E11960b");
+   token = new web3.eth.Contract(tokenabi, "0xf5DB9F1F25363FF3fD49D56DF30267C9B93D11d3");
 	let bal = await token.methods.getBalance(account).call();
     $(".bal").html(web3.utils.fromWei(bal.toString(), 'ether'))
 	let eth_bal = await web3.eth.getBalance(account)
@@ -20,7 +20,7 @@ async function check_right_network() {
 				err = true;
 			}
 		})
-		.catch((err) => {alert("Unable to connect");err = true;});
+		.catch((err) => {alert("Unable to connect to wallet");err = true;});
 	return err
 }
 async function connected_to_web3() {
