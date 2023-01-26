@@ -54,7 +54,7 @@ def start_mine():
         return
     current_user.earned_today = 0
     current_user.mining = True
-    current_user.mined += 10
+    current_user.mined += 5
     current_user.started_mining = datetime.now()
     db.session.commit()
     print(current_user.mining, current_user.started_mining)

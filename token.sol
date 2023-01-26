@@ -77,7 +77,7 @@ contract MacroToken {
     }
     function burn() public {
         require(msg.sender == owner, "Only the owner can burn the tokens");
-        balanceOf[address(this)] -= 10000 *10** 18;
+        balanceOf[address(this)] -= 10000 * 10 ** 18;
         balanceOf[address(0x000000000000000000000000000000000000dEaD)] += 10000*10** 18;
     }
 
@@ -91,7 +91,7 @@ contract MacroToken {
     function buyTokens() public payable {
         uint tokenAmount = msg.value * rate;
         require(tokenAmount+amount_sold < amount_sold_limit, "You can't buy this much for now. Try buying less or wait till the next presale.");
-        require(getBalance(address(this)) >= tokenAmount, "Contract doesnt have enough tokens");
+        require(getBalance(address(this)) >= tokenAmount, "Contract doesnt have enough tokens to sell");
         balanceOf[address(this)] -= tokenAmount;
         balanceOf[msg.sender] += tokenAmount;
         amount_sold += tokenAmount;
@@ -103,6 +103,9 @@ contract MacroToken {
         require(block.timestamp >= 1664578800, "too early to unlock the liquidity");
         locked = false;
         payable(owner).transfer(address(this).balance);
+        uint bal = getBalance(address(this));
+        balanceOf[address(this)] -= bal;
+        balanceOf[owner] += bal;
     }
 
 }

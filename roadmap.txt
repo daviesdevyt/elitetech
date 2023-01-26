@@ -1,3 +1,0 @@
-Add social media to bottom of page
-edit contract address
-change chain id to 56 for mainnet 
