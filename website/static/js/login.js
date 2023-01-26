@@ -42,7 +42,7 @@ async function loadweb3() {
 	}
 	else {
 		window.alert(
-			"Wallet extension detected. You should consider trying MetaMask or Trust wallet!"
+			"Wallet extension not detected. You should consider trying MetaMask or Trust wallet!"
 		);
 	}
 }
